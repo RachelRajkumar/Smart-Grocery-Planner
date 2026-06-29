@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Grocery Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🛒 Smart Grocery Planner</h1>
+
+    <div class="budget-box">
+        <input type="number" id="budget" placeholder="Enter Your Budget">
+        <button onclick="setBudget()">💰 Set Budget</button>
+    </div>
+
+    <div class="item-box">
+        <input type="text" id="itemName" placeholder="Product Name">
+        <input type="number" id="itemPrice" placeholder="Product Price">
+        <button onclick="addItem()">➕ Add Product</button>
+    </div>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search Product..."
+        onkeyup="searchItems()"
+    >
+
+    <div class="summary">
+
+        <div class="card">
+            <h3>💰 Budget</h3>
+            <span>₹<span id="budgetDisplay">0</span></span>
+        </div>
+
+        <div class="card">
+            <h3>🧾 Total Cost</h3>
+            <span>₹<span id="totalCost">0</span></span>
+        </div>
+
+        <div class="card">
+            <h3>💵 Remaining</h3>
+            <span>₹<span id="remaining">0</span></span>
+        </div>
+
+    </div>
+
+    <ul id="itemList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
